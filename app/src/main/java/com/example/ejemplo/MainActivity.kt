@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         sentenciaIf()
         sentenciaWhen()
         maps()
+        loops()
     }
 
     //Esta es una prueba de comentario
@@ -165,5 +166,47 @@ class MainActivity : AppCompatActivity() {
             myMap.remove("Seis")
             println(myMap)
         }
+        fun loops(){
+            //for while
+            //for
 
+            val myArray: List<String> = listOf("Alejandro", "Alvarez", "Del Valle de Guatemala", "Guatemala")
+            val myMap = mutableMapOf("Uno" to 1, "Dos" to 2, "Tres" to 3, "Cuatro" to 4)
+
+            for(myString: String in myArray){
+                println(myString)
+            }
+            for(myElement: MutableMap.MutableEntry<String, Int> in myMap){
+                println("${myElement.key}-${myElement.value}")
+            }
+            //Aplicación
+            println("Ejemplo con in")
+            for(x:Int in 0..10){
+                println(x)
+            }
+            println("Ejemplo con until")
+            for(x:Int in 0 until 10){
+                println(x)
+            }
+            println("Ejemplo con until-step")
+            for(x:Int in 0 until 10 step 2){
+                println(x)
+            }
+            println("Ejemplo con downTo-step")
+            for(x:Int in 10 downTo 0 step 3){
+                println(x)
+            }
+            println("Ejemplo con IntRange")
+            val myNumericArray: IntRange = (0..20)
+            for (myNum:Int in myNumericArray){
+                println(myNum)
+            }
+            //While
+            println("Ejemplo con While")
+            var x =0
+            while(x<10){
+                println(x)
+                x=(x+1)
+            }
+        }
 }
