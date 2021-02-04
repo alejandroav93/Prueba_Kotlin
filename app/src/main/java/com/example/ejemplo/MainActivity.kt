@@ -19,13 +19,44 @@ class MainActivity : AppCompatActivity() {
         sentenciaWhen()
         maps()
         loops()
+        funciones()
+        nullSafety()
     }
 
     //Esta es una prueba de comentario
     /*
     Esta es una prueba de comentario 2
      */
-
+    fun funciones(){
+        sayHello()
+        println(sumTwoNumber(10, 20))
+        println(sumTwoNumber(1000, 22000))
+        sayMyNameAndDeuda("Alejandro", 200.00)
+    }
+    fun sayMyNameAndDeuda(name: String, deuda: Double){
+        println("Hola, Mi Nombre es $name y mi deuda es $deuda")
+    }
+    fun nullSafety(){
+        var myString = "UVG"
+        println(myString)
+        //Gestion de nulos
+        //Esta e suna variable null safety
+        var mySafetyString: String?
+        mySafetyString = null
+        println(mySafetyString?.length)
+        mySafetyString?.let {
+            println()
+        }?: run {
+            println(mySafetyString)
+        }
+    }
+    fun sayHello(){
+        println("Hello World!")
+    }
+    fun sumTwoNumber(fNumber: Int, sNumber: Int): Int{
+        val sum: Int = fNumber + sNumber
+        return sum
+    }
     //Variables y Constantes
     private fun variablesYConstantes() {
         //Variables
